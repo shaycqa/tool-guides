@@ -93,3 +93,17 @@ katana -u https://example.com -silent | dalfox pipe -b "https://your.xss.ht"
 - **Blind XSS**: Use the `-b` flag to specify your XSS Hunter or Interactsh payload for out-of-band/blind XSS detection.
 - **Custom Payloads**: Use `--custom-payload` to feed specific bypasses if a WAF is blocking standard payloads.
 - **Deep DOM Extraction**: Dalfox has built-in DOM parsing to find hidden sinks.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com/search?q=test
+https://test.com/profile?name=john
+```
+
+**Output File (`results.txt`)**
+```text
+[V] [Reflected] https://example.com/search?q=%22%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E
+```

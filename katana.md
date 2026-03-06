@@ -72,3 +72,20 @@ katana -u https://example.com -proxy http://127.0.0.1:8080
 - **Headless Crawling**: Use `-hl` to enable headless browser mode, which is essential for crawling Single Page Applications (React, Angular, Vue).
 - **Field Extraction**: Katana can automatically extract JS files, endpoints, or emails during the crawl using `-f` (e.g., `-f qurl`).
 - **Depth Control**: Use `-d` to limit crawl depth to prevent infinite loops or excessively long crawls.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com
+https://test.com
+```
+
+**Output File (`crawled_urls.txt`)**
+```text
+https://example.com/about
+https://example.com/contact
+https://example.com/api/v1/status
+https://test.com/login
+```

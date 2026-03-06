@@ -75,3 +75,18 @@ httpx -l hosts.txt -title -sc -o live_hosts.txt
 - **Title & Tech**: Use `-title` and `-tech-detect` (powered by wappalyzer) to quickly identify the software running on the hosts.
 - **Status Code Filtering**: Only keep alive/interesting endpoints: `-mc 200,301,302,403`.
 - **Follow Redirects**: By default `httpx` doesn't follow redirects. Use `-fr` to follow them to the final destination.
+
+
+## Input & Output Examples
+
+**Input File (`hosts.txt` or `ports.txt`)**
+```text
+192.168.1.15:80
+example.com:8443
+```
+
+**Output File (`alive.txt`)**
+```text
+http://192.168.1.15
+https://example.com:8443
+```

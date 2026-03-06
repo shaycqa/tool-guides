@@ -68,3 +68,19 @@ subfinder -d example.com -silent | httpx -silent | nuclei -t cves/
 - **API Configurations**: Subfinder's default sources are decent, but configuring API keys in `~/.config/subfinder/provider-config.yaml` (Shodan, Censys, SecurityTrails, Chaos) dramatically increases results.
 - **Chaining**: Standard pipeline: `subfinder -silent -d target.com | httpx -silent > alive.txt`.
 - **Recursive Searches**: Use `--recursive` to find sub-subdomains, but be aware this significantly increases scan time.
+
+
+## Input & Output Examples
+
+**Input File (`domains.txt`)**
+```text
+example.com
+test.com
+```
+
+**Output File (`subdomains.txt`)**
+```text
+api.example.com
+dev.example.com
+admin.test.com
+```

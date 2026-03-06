@@ -45,3 +45,19 @@ echo 'https://sub.example.com/api/v1' | unfurl format %d%p
 - **JSON Output**: Use `--json` to output parsed URL components as JSON for easy parsing with `jq`.
 - **Extracting Endpoints**: You can extract the base path (without query strings) using `format` to find unique API endpoints.
 - **Chaining**: Perfect for feeding into `ffuf` or `sqlmap`. E.g., `cat urls.txt | unfurl keys | sort -u > parameters.txt`.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com/api/v1/users?id=1&role=admin
+https://test.com/login.php?redirect=/dashboard
+```
+
+**Output (e.g., using `keys` mode)**
+```text
+id
+role
+redirect
+```

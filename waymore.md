@@ -45,3 +45,19 @@ waymore -i example.com -mode U | unfurl keys | sort -u
 - **API Keys**: Edit the `config.yml` (usually in `~/.config/waymore/`) to add keys for URLScan and VirusTotal for maximum coverage.
 - **Memory Management**: If dealing with a massive scope, use `-mode U` first, filter the URLs, and only download responses (`-mode R`) for the interesting ones.
 - **Filtering**: Waymore automatically handles some deduplication, but piping through `uro` is still recommended.
+
+
+## Input & Output Examples
+
+**Input File (`domains.txt`)**
+```text
+example.com
+test.com
+```
+
+**Output File (`waymore_urls.txt`)**
+```text
+https://example.com/assets/main.js
+https://example.com/api/v1/users?id=1
+https://test.com/admin/login.php
+```

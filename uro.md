@@ -42,3 +42,20 @@ cat urls.txt | uro -b js css png jpg
 ## Important Setup & Advanced Tips
 - **Vulnerability Filtering**: Newer versions support `-f vuln` which strictly filters for URLs containing parameters historically associated with vulnerabilities (SSRF, LFI, SQLi).
 - **Custom Regexes**: Uro's power lies in its underlying patterns. Keep the tool updated to benefit from improved deduplication logic.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com/api/users?id=1
+https://example.com/api/users?id=2
+https://example.com/style.css
+https://test.com/login.php
+```
+
+**Output File (`filtered_urls.txt`)**
+```text
+https://example.com/api/users?id=1
+https://test.com/login.php
+```

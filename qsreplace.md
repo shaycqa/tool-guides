@@ -39,3 +39,18 @@ cat urls.txt | qsreplace ''
 - **Blind SSRF**: The most common use case is replacing all parameters with a Burp Collaborator / Interactsh payload: `cat urls.txt | qsreplace "http://your-interactsh.com"`.
 - **Appends**: Using `-a` appends the payload instead of replacing, which is useful for testing SQLi (e.g., appending `'` or `"`).
 - **Multiple Replacements**: You can run it multiple times or use a bash loop to test a small list of highly effective payloads.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com/page.php?id=1
+https://example.com/search?q=test
+```
+
+**Output (e.g., running `qsreplace 'XSS'`)**
+```text
+https://example.com/page.php?id=XSS
+https://example.com/search?q=XSS
+```

@@ -71,3 +71,18 @@ nuclei -update-templates
 - **Template Updates**: Always run `nuclei -ut` before scanning to ensure you have the latest vulnerability templates.
 - **Rate Limiting**: To avoid WAF bans, use `-rl` (rate limit) and `-c` (concurrency) flags carefully.
 - **Workflow Usage**: Use `-w` to run predefined workflows (e.g., `workflows/wordpress-workflow.yaml`) rather than blindly firing all templates.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com
+http://192.168.1.15:8080
+```
+
+**Output File (`results.txt`)**
+```text
+[cve-2021-44228] [http] [critical] https://example.com/?q=${jndi:ldap://...}
+[tech-detect] [http] [info] http://192.168.1.15:8080 [Apache Tomcat]
+```

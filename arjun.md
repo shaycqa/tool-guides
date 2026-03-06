@@ -73,3 +73,22 @@ ffuf -u "https://example.com/api/search?id=FUZZ" -w ids.txt
 - **Rate Limiting**: Arjun can be noisy. Use `-t` to lower threads and `-d` for delay to avoid being blocked.
 - **Custom Wordlists**: The default wordlist is great, but combining it with `SecLists` parameter names can yield better results: `-w /path/to/wordlist.txt`.
 - **Method Specification**: Make sure to test both GET and POST methods (`-m GET,POST`) as hidden parameters might only exist in one.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com/api/users
+https://test.com/profile
+```
+
+**Output File (`arjun_results.json`)**
+```json
+{
+  "https://example.com/api/users": {
+    "params": ["admin", "debug", "test"],
+    "method": "GET"
+  }
+}
+```

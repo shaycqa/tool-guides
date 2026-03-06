@@ -45,3 +45,18 @@ cat urls.txt | gf ssrf
 - **Installing Patterns**: `gf` is empty by default. You MUST clone a pattern repository (like `1ndianl33t/Gf-Patterns`) and copy the `.json` files to `~/.gf/`.
 - **Custom Patterns**: You can easily create your own JSON pattern files to grep for company-specific internal domains or specific framework errors.
 - **Dump Flag**: Use `-dump` to see the actual raw grep command `gf` is running behind the scenes.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com/page.php?id=1
+https://example.com/search?q=test
+https://example.com/redirect?url=http://test.com
+```
+
+**Output (e.g., using `gf sqli` pattern)**
+```text
+https://example.com/page.php?id=1
+```

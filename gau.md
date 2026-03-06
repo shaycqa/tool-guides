@@ -49,3 +49,19 @@ cat domains.txt | gau --threads 5
 - **Configuration**: Create a `~/.gau.toml` file to add API keys for URLScan, VirusTotal, and OTX to get significantly more results.
 - **Thread Tuning**: Default threads might be too low or too high. Adjust `--threads` based on your network speed.
 - **Combine with Uro**: Always pipe `gau` output into `uro` to remove noisy and duplicate URLs.
+
+
+## Input & Output Examples
+
+**Input File (`domains.txt`)**
+```text
+example.com
+test.com
+```
+
+**Output File (`urls.txt`)**
+```text
+https://example.com/about
+https://example.com/api/v1/users?id=1
+https://test.com/admin/login.php
+```

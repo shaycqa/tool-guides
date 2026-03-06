@@ -68,3 +68,26 @@ cat subs.txt wordlist.txt | puredns resolve -r resolvers.txt --write valid_subs.
 - **Valid Resolvers**: Puredns requires a high-quality list of public resolvers to function correctly. Download lists from trickest/resolvers.
 - **Wildcard Filtering**: It uses advanced machine learning/statistical models to bypass complex wildcard DNS setups, saving huge amounts of time.
 - **Rate Limiting**: Use `-l` or `--rate-limit` to restrict queries per second so you don't overwhelm your own router or the resolvers.
+
+
+## Input & Output Examples
+
+**Input File (`domains.txt`)**
+```text
+example.com
+test.com
+```
+
+**Input File (`resolvers.txt`)**
+```text
+8.8.8.8
+1.1.1.1
+9.9.9.9
+```
+
+**Output File (`resolved_subdomains.txt`)**
+```text
+api.example.com
+dev.example.com
+admin.test.com
+```

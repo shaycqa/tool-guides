@@ -51,3 +51,18 @@ subfinder -d example.com -silent | dnsx -silent
 - **Brute-Forcing**: dnsx can be used for subdomain bruteforcing with a wordlist: `dnsx -d example.com -w wordlist.txt`.
 - **Custom Resolvers**: Always use a reliable list of resolvers to prevent rate-limiting/blocks: `dnsx -l domains.txt -r resolvers.txt`.
 - **Wildcard Filtering**: Automatically filter out wildcard DNS records by adding `-wd`.
+
+
+## Input & Output Examples
+
+**Input File (`domains.txt`)**
+```text
+api.example.com
+dev.example.com
+```
+
+**Output File (`resolved.txt`)**
+```text
+api.example.com [192.168.1.15]
+dev.example.com [10.0.0.5]
+```

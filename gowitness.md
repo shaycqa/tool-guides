@@ -44,3 +44,17 @@ gowitness file -f urls.txt --timeout 15
 - **Authentication**: You can pass headers for authenticated screenshots: `--header "Authorization: Bearer token"`.
 - **Delay**: SPAs (Single Page Applications) often take time to render. Use `--delay 3` to wait 3 seconds before taking the screenshot.
 - **Visual Recon**: Use the `gowitness report server` command to quickly scroll through hundreds of subdomains and visually identify interesting admin panels or default installations.
+
+
+## Input & Output Examples
+
+**Input File (`urls.txt`)**
+```text
+https://example.com
+https://test.com
+```
+
+**Output**
+```text
+Directory with screenshot images (e.g., `https-example.com.png`, `https-test.com.png`)
+```

@@ -40,3 +40,19 @@ echo example.com | waybackurls -no-subs
 ```bash
 echo example.com | waybackurls > urls.txt
 ```
+
+
+## Input & Output Examples
+
+**Input File (`domains.txt`)**
+```text
+example.com
+test.com
+```
+
+**Output File (`urls.txt`)**
+```text
+http://example.com/robots.txt
+https://example.com/api/v1/users?id=1
+https://test.com/login.php
+```

@@ -76,3 +76,21 @@ ffuf -u http://example.com/FUZZ -w wordlist.txt -p http://127.0.0.1:8080
 - **Auto-Calibration**: Always use `-ac` to automatically calibrate filtering for custom 404s and WAF blocks.
 - **Multiple Fuzz Points**: You can use multiple wordlists by specifying variables: `-w users.txt:W1 -w passwords.txt:W2 -u http://target/W1/W2`.
 - **Match/Filter by Regex**: Use `-mr` or `-fr` to match/filter responses containing specific strings or regex patterns.
+
+
+## Input & Output Examples
+
+**Input File (`wordlist.txt`)**
+```text
+admin
+login
+api
+dashboard
+```
+
+**Output File (`results.json` or CLI output)**
+```text
+admin                   [Status: 403, Size: 250, Words: 10, Lines: 5]
+login                   [Status: 200, Size: 1540, Words: 120, Lines: 45]
+api                     [Status: 301, Size: 0, Words: 1, Lines: 1]
+```
