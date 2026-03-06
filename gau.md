@@ -43,3 +43,9 @@ gau example.com --blacklist png,jpg,jpeg,gif,svg,woff,woff2
 ```bash
 cat domains.txt | gau --threads 5
 ```
+
+
+## Important Setup & Advanced Tips
+- **Configuration**: Create a `~/.gau.toml` file to add API keys for URLScan, VirusTotal, and OTX to get significantly more results.
+- **Thread Tuning**: Default threads might be too low or too high. Adjust `--threads` based on your network speed.
+- **Combine with Uro**: Always pipe `gau` output into `uro` to remove noisy and duplicate URLs.

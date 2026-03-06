@@ -37,3 +37,9 @@ hashcat -m 0 hashes.txt --show
 ```bash
 hashcat -m 0 -a 3 hashes.txt ?d?d?d?d
 ```
+
+
+## Important Setup & Advanced Tips
+- **Mask Attacks**: Use masks for known patterns (e.g., `?u?l?l?l?d?d?d?d` for a capital letter, 3 lowercase, 4 digits).
+- **Rules**: Use rule files to mutate your wordlists automatically: `-r /usr/share/hashcat/rules/best64.rule`.
+- **Hardware Optimization**: Use `-w 3` or `-w 4` to increase the workload profile for faster cracking on dedicated GPUs.

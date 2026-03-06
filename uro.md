@@ -37,3 +37,8 @@ cat urls.txt | uro -w html php aspx -f hasext
 ```bash
 cat urls.txt | uro -b js css png jpg
 ```
+
+
+## Important Setup & Advanced Tips
+- **Vulnerability Filtering**: Newer versions support `-f vuln` which strictly filters for URLs containing parameters historically associated with vulnerabilities (SSRF, LFI, SQLi).
+- **Custom Regexes**: Uro's power lies in its underlying patterns. Keep the tool updated to benefit from improved deduplication logic.

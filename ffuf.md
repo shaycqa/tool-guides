@@ -70,3 +70,9 @@ ffuf -u http://example.com/login -X POST \
 ```bash
 ffuf -u http://example.com/FUZZ -w wordlist.txt -p http://127.0.0.1:8080
 ```
+
+
+## Important Setup & Advanced Tips
+- **Auto-Calibration**: Always use `-ac` to automatically calibrate filtering for custom 404s and WAF blocks.
+- **Multiple Fuzz Points**: You can use multiple wordlists by specifying variables: `-w users.txt:W1 -w passwords.txt:W2 -u http://target/W1/W2`.
+- **Match/Filter by Regex**: Use `-mr` or `-fr` to match/filter responses containing specific strings or regex patterns.

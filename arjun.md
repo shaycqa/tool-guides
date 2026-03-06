@@ -67,3 +67,9 @@ arjun -u https://example.com/api/search -m GET -o params.json
 # 2. Use discovered params for fuzzing with ffuf
 ffuf -u "https://example.com/api/search?id=FUZZ" -w ids.txt
 ```
+
+
+## Important Setup & Advanced Tips
+- **Rate Limiting**: Arjun can be noisy. Use `-t` to lower threads and `-d` for delay to avoid being blocked.
+- **Custom Wordlists**: The default wordlist is great, but combining it with `SecLists` parameter names can yield better results: `-w /path/to/wordlist.txt`.
+- **Method Specification**: Make sure to test both GET and POST methods (`-m GET,POST`) as hidden parameters might only exist in one.

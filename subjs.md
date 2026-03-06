@@ -37,3 +37,9 @@ echo 'example.com' | subjs -wayback
 ```bash
 subjs -i urls.txt > javascript_files.txt
 ```
+
+
+## Important Setup & Advanced Tips
+- **Authentication**: If the target requires auth, pass headers using `-H "Authorization: Bearer <token>"`.
+- **Parsing Limits**: `subjs` is fast but might miss dynamically loaded chunks (like Webpack chunks). Use a headless browser crawler for deep SPA applications.
+- **Combine**: Best paired with `SecretFinder` or `LinkFinder`: `cat subdomains.txt | subjs | xargs -I % python3 SecretFinder.py -i % -o cli`.

@@ -62,3 +62,9 @@ subfinder -d example.com -silent | httpx -silent -o live.txt
 subfinder -d example.com -silent | httpx -silent | nuclei -t cves/
 ```
 *Subdomain discovery → probe for live hosts → vulnerability scan.*
+
+
+## Important Setup & Advanced Tips
+- **API Configurations**: Subfinder's default sources are decent, but configuring API keys in `~/.config/subfinder/provider-config.yaml` (Shodan, Censys, SecurityTrails, Chaos) dramatically increases results.
+- **Chaining**: Standard pipeline: `subfinder -silent -d target.com | httpx -silent > alive.txt`.
+- **Recursive Searches**: Use `--recursive` to find sub-subdomains, but be aware this significantly increases scan time.

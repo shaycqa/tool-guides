@@ -72,3 +72,9 @@ nmap -p 80,443 --script http-vuln* example.com
 ```bash
 nmap -iL targets.txt -Pn -sV
 ```
+
+
+## Important Setup & Advanced Tips
+- **Nmap Scripting Engine (NSE)**: The real power of Nmap. Use `--script vuln` to check for common CVEs, or `--script http-enum` to enumerate directories.
+- **Timing Templates**: Use `-T4` for faster scanning on reliable networks, but drop to `-T2` if you are getting dropped packets or encountering firewalls.
+- **Output All Formats**: Always use `-oA <filename>` to save results in Grepable, XML, and Normal formats simultaneously.

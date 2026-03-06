@@ -36,3 +36,9 @@ censys search --index-type certs "parsed.subject.common_name: example.com"
 ```bash
 censys search "example.com" --output json > results.json
 ```
+
+
+## Important Setup & Advanced Tips
+- **Configuration**: Run `censys config` to set up your API ID and Secret.
+- **ASM (Attack Surface Management)**: The CLI also supports interacting with Censys ASM via the `censys asm` subcommand.
+- **Dorking**: You can use complex boolean logic and regular expressions in your search queries.

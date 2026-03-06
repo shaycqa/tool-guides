@@ -71,3 +71,9 @@ curl -F "file=@shell.php" https://example.com/upload
 ```bash
 curl -u admin:password https://example.com/admin
 ```
+
+
+## Important Setup & Advanced Tips
+- **Path Traversal**: Use `--path-as-is` so curl doesn't squash `../` sequences before sending the request.
+- **Timing & Performance**: Use `-w` (write-out) to measure response times: `curl -w "%{time_total}\n" -o /dev/null -s http://example.com`.
+- **Proxying**: Easily send traffic through Burp Suite for inspection: `-x http://127.0.0.1:8080`.

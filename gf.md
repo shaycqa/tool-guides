@@ -39,3 +39,9 @@ cat urls.txt | gf interestingEXT
 ```bash
 cat urls.txt | gf ssrf
 ```
+
+
+## Important Setup & Advanced Tips
+- **Installing Patterns**: `gf` is empty by default. You MUST clone a pattern repository (like `1ndianl33t/Gf-Patterns`) and copy the `.json` files to `~/.gf/`.
+- **Custom Patterns**: You can easily create your own JSON pattern files to grep for company-specific internal domains or specific framework errors.
+- **Dump Flag**: Use `-dump` to see the actual raw grep command `gf` is running behind the scenes.

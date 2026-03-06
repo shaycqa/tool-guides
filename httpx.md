@@ -69,3 +69,9 @@ subfinder -d example.com -silent | httpx -silent | nuclei -t cves/
 ```bash
 httpx -l hosts.txt -title -sc -o live_hosts.txt
 ```
+
+
+## Important Setup & Advanced Tips
+- **Title & Tech**: Use `-title` and `-tech-detect` (powered by wappalyzer) to quickly identify the software running on the hosts.
+- **Status Code Filtering**: Only keep alive/interesting endpoints: `-mc 200,301,302,403`.
+- **Follow Redirects**: By default `httpx` doesn't follow redirects. Use `-fr` to follow them to the final destination.

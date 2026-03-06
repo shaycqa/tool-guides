@@ -65,3 +65,9 @@ cewl https://example.com --with-numbers -w wordlist.txt
 cewl -d 2 -m 5 --with-numbers -w custom_wordlist.txt https://example.com
 ```
 *Depth 2, min 5 chars, includes numbers — a good balance for targeted attacks.*
+
+
+## Important Setup & Advanced Tips
+- **Depth Settings**: Use `-d` to control how deep CeWL spiders the site (default is 2).
+- **Minimum Word Length**: Use `-m` to set a minimum word length to filter out useless small words (e.g., `-m 5`).
+- **Authentication**: CeWL supports basic auth (`--auth_type`, `--auth_user`, `--auth_pass`) if the target is protected.

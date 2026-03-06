@@ -65,3 +65,9 @@ nuclei -u https://example.com -t cves/2021/CVE-2021-44228.yaml
 ```bash
 nuclei -update-templates
 ```
+
+
+## Important Setup & Advanced Tips
+- **Template Updates**: Always run `nuclei -ut` before scanning to ensure you have the latest vulnerability templates.
+- **Rate Limiting**: To avoid WAF bans, use `-rl` (rate limit) and `-c` (concurrency) flags carefully.
+- **Workflow Usage**: Use `-w` to run predefined workflows (e.g., `workflows/wordpress-workflow.yaml`) rather than blindly firing all templates.

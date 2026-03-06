@@ -37,3 +37,9 @@ python3 jwt_tool.py <jwt_token> -I
 ```bash
 python3 jwt_tool.py <jwt_token> -t https://api.example.com/user -rh 'Authorization: Bearer ' -M pb
 ```
+
+
+## Important Setup & Advanced Tips
+- **Advanced Attacks**: Use `-X k` for Key Confusion (RS256 to HS256) and `-X I` for JWK/JKU Header Injection.
+- **Tampering**: You can base64 encode/decode and manually sign tokens within the interactive mode (`-I`).
+- **Public Keys**: If you find the server's public key, you can provide it to `jwt_tool` to forge HS256 tokens in a Key Confusion attack.

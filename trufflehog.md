@@ -43,3 +43,9 @@ trufflehog git https://github.com/example/repo.git --only-verified
 ```bash
 trufflehog filesystem ./src --json > secrets.json
 ```
+
+
+## Important Setup & Advanced Tips
+- **CI/CD Integration**: TruffleHog is frequently used in GitHub Actions or GitLab CI to prevent secrets from being committed in the first place.
+- **Concurrency**: Use `--concurrency` to speed up scans on large repositories or entire organizations.
+- **Custom Rules**: You can build and pass custom YAML rules to look for proprietary token formats.

@@ -66,3 +66,9 @@ katana -u https://example.com -H "Cookie: session=abc123"
 ```bash
 katana -u https://example.com -proxy http://127.0.0.1:8080
 ```
+
+
+## Important Setup & Advanced Tips
+- **Headless Crawling**: Use `-hl` to enable headless browser mode, which is essential for crawling Single Page Applications (React, Angular, Vue).
+- **Field Extraction**: Katana can automatically extract JS files, endpoints, or emails during the crawl using `-f` (e.g., `-f qurl`).
+- **Depth Control**: Use `-d` to limit crawl depth to prevent infinite loops or excessively long crawls.

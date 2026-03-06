@@ -43,3 +43,9 @@ shodan search "org:\"Example Corp\""
 ```bash
 shodan download results_file "hostname:example.com"
 ```
+
+
+## Important Setup & Advanced Tips
+- **Initialization**: You must initialize the CLI with your API key first: `shodan init <API_KEY>`.
+- **Monitoring**: Set up network alerts for your infrastructure: `shodan alert create "My Network" 198.51.100.0/24`.
+- **Facets**: Get aggregate statistics using facets: `shodan search --facets port "org:Example"`.

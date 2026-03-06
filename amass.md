@@ -44,3 +44,9 @@ amass intel -asn 12345
 ```bash
 amass enum -d example.com -o amass_results.txt
 ```
+
+
+## Important Setup & Advanced Tips
+- **API Keys**: Amass's true power comes from APIs. Configure them in `~/.config/amass/config.ini` and run with `-config ~/.config/amass/config.ini`.
+- **Continuous Monitoring**: Use `amass track -d example.com` to see what changed since the last enumeration.
+- **Visualization**: Use `amass viz -d3` to generate network graphs.

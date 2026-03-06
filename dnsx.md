@@ -45,3 +45,9 @@ echo 192.168.1.0/24 | dnsx -ptr -resp-only
 ```bash
 subfinder -d example.com -silent | dnsx -silent
 ```
+
+
+## Important Setup & Advanced Tips
+- **Brute-Forcing**: dnsx can be used for subdomain bruteforcing with a wordlist: `dnsx -d example.com -w wordlist.txt`.
+- **Custom Resolvers**: Always use a reliable list of resolvers to prevent rate-limiting/blocks: `dnsx -l domains.txt -r resolvers.txt`.
+- **Wildcard Filtering**: Automatically filter out wildcard DNS records by adding `-wd`.

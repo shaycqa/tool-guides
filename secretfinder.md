@@ -35,3 +35,9 @@ while read url; do python3 SecretFinder.py -i $url -o cli; done < js_urls.txt
 ```bash
 python3 SecretFinder.py -i https://example.com/app.js -o report.html
 ```
+
+
+## Important Setup & Advanced Tips
+- **Custom Regex**: You can define your own regular expressions in the `regex.py` file within the SecretFinder directory to look for internal company patterns.
+- **False Positives**: JS files often contain placeholder API keys or example tokens. Always validate the keys manually or via an automated validation script.
+- **Headers**: Use the `-c` flag to pass cookies if the JS files are behind authentication.

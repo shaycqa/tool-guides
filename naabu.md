@@ -65,3 +65,9 @@ naabu -host example.com -p 80,443 -nmap-cli "nmap -sV -sC"
 ```bash
 naabu -l hosts.txt -rate 5000 -top-ports 100 -silent -o results.txt
 ```
+
+
+## Important Setup & Advanced Tips
+- **Nmap Integration**: You can pipe naabu's fast port discovery directly into nmap for deep service fingerprinting using the `-nmap` flag.
+- **CDN Exclusion**: By default, naabu excludes CDN IPs (Cloudflare, Akamai) to avoid scanning their entire edge network. Use `-exclude-cdn`.
+- **Host Discovery**: Use `-host-discovery` to do a quick ping sweep before doing deep port scans.

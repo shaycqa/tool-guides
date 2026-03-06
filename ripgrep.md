@@ -76,3 +76,9 @@ rg 'api[_-]?key\s*=' .
 ```bash
 rg -c "error" ./logs
 ```
+
+
+## Important Setup & Advanced Tips
+- **Context**: Use `-C 3` to show 3 lines of context around the match, or `-A` (after) / `-B` (before).
+- **File Types**: Search only in specific file types easily: `rg -t js "API_KEY"`.
+- **Regex Support**: By default, `rg` supports standard regex. Use `-e` to explicitly define regex, or `-F` for fixed string matching (much faster).

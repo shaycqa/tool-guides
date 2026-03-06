@@ -37,3 +37,9 @@ paramspider -l domains.txt
 ```bash
 paramspider -d example.com -o params.txt
 ```
+
+
+## Important Setup & Advanced Tips
+- **Stream Mode**: In v2, use the `-s` flag to stream results directly to stdout, which is perfect for piping into `httpx` or `kxss`.
+- **Rate Limiting**: Since it relies on the Wayback Machine API, it can sometimes time out on massive targets.
+- **Hidden Params**: ParamSpider only finds *historically known* parameters. Use `Arjun` alongside it to brute-force unknown hidden parameters.
