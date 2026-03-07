@@ -3,6 +3,11 @@
 ## What it is
 The go-to network scanner for port scanning, service/version detection, OS fingerprinting, and running NSE scripts. Foundation of any recon phase.
 
+## Installation
+```bash
+sudo apt install nmap
+```
+
 ---
 
 ## Key Flags

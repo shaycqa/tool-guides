@@ -3,6 +3,11 @@
 ## What it is
 A fast port scanner by ProjectDiscovery. Designed for speed and easy integration into recon pipelines. Supports SYN, CONNECT, and UDP scanning with nmap integration for service detection.
 
+## Installation
+```bash
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+```
+
 ---
 
 ## Key Flags

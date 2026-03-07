@@ -3,6 +3,11 @@
 ## What it is
 A fast and multi-purpose DNS toolkit by ProjectDiscovery. It allows you to run multiple DNS queries of your choice with a list of user-supplied resolvers.
 
+## Installation
+```bash
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+```
+
 ---
 
 ## Key Flags

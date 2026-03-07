@@ -3,6 +3,11 @@
 ## What it is
 A fast, automated XSS scanner and parameter analyzer written in Go. Detects reflected, stored, and DOM-based XSS. Also catches open redirects, SSTI, and SQL injection hints. Integrates easily into pipelines.
 
+## Installation
+```bash
+go install github.com/hahwul/dalfox/v2@latest
+```
+
 ---
 
 ## Key Flags

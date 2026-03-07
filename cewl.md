@@ -3,6 +3,11 @@
 ## What it is
 CeWL (Custom Word List generator) crawls a website and generates a custom wordlist from the words found on the page. Useful for targeted password attacks and fuzzing.
 
+## Installation
+```bash
+sudo apt install cewl
+```
+
 ---
 
 ## Key Flags

@@ -3,6 +3,11 @@
 ## What it is
 A tool by xnl-h4ck3r used to discover URLs and download archived responses from multiple sources like the Wayback Machine, Common Crawl, Alien Vault OTX, and more. It effectively finds 'way more' than traditional Wayback tools.
 
+## Installation
+```bash
+pip install waymore
+```
+
 ---
 
 ## Key Flags

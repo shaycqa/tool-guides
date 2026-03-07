@@ -3,6 +3,11 @@
 ## What it is
 A tool by tomnomnom to replace all query string values in a list of URLs with a custom payload. Essential for mass-testing XSS, SQLi, or SSRF payloads.
 
+## Installation
+```bash
+go install github.com/tomnomnom/qsreplace@latest
+```
+
 ---
 
 ## Key Flags

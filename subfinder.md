@@ -3,6 +3,11 @@
 ## What it is
 A passive subdomain discovery tool by ProjectDiscovery. Uses +40 online data sources (VirusTotal, Shodan, Censys, etc.) to find subdomains without directly touching the target.
 
+## Installation
+```bash
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+```
+
 ---
 
 ## Key Flags

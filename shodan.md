@@ -3,6 +3,11 @@
 ## What it is
 The command-line interface for Shodan, the search engine for Internet-connected devices. Useful for discovering exposed infrastructure and ports.
 
+## Installation
+```bash
+pip install shodan
+```
+
 ---
 
 ## Key Flags

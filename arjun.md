@@ -3,6 +3,11 @@
 ## What it is
 A hidden HTTP parameter discovery tool. Fuzzes GET/POST/JSON parameters to find undocumented or hidden inputs in web applications. Has a built-in dictionary of 10,000+ parameter names.
 
+## Installation
+```bash
+pip install arjun
+```
+
 ---
 
 ## Key Flags

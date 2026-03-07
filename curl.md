@@ -3,6 +3,11 @@
 ## What it is
 A command-line tool for transferring data to/from servers using HTTP, HTTPS, FTP, and more. Essential for manual HTTP request crafting in recon and testing.
 
+## Installation
+```bash
+sudo apt install curl
+```
+
 ---
 
 ## Key Flags

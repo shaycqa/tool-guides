@@ -3,6 +3,11 @@
 ## What it is
 Fuzz Faster U Fool — a fast web fuzzer for directory/file discovery, parameter fuzzing, subdomain enumeration, and vhost fuzzing. Uses `FUZZ` as a placeholder in the URL.
 
+## Installation
+```bash
+go install github.com/ffuf/ffuf/v2@latest
+```
+
 ---
 
 ## Key Flags

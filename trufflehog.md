@@ -3,6 +3,11 @@
 ## What it is
 A tool that finds and verifies exposed secrets in source code, commit history, and various other sources like GitHub, GitLab, and filesystems.
 
+## Installation
+```bash
+curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
+```
+
 ---
 
 ## Key Flags

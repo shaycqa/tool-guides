@@ -3,6 +3,11 @@
 ## What it is
 A fast web crawler by ProjectDiscovery. Crawls websites to discover endpoints, links, and JavaScript-rendered content. Supports headless browsing for SPAs (React/Angular/Vue).
 
+## Installation
+```bash
+go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+```
+
 ---
 
 ## Key Flags

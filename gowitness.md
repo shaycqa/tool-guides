@@ -3,6 +3,11 @@
 ## What it is
 A website screenshot utility written in Golang by sensepost, that uses Chrome Headless to generate screenshots of web interfaces using a provided list of URLs.
 
+## Installation
+```bash
+go install github.com/sensepost/gowitness@latest
+```
+
 ---
 
 ## Key Flags

@@ -3,6 +3,11 @@
 ## What it is
 Command-line interface for the Censys search engine, designed to discover internet-facing devices and services using active scanning data.
 
+## Installation
+```bash
+pip install censys
+```
+
 ---
 
 ## Key Flags

@@ -3,6 +3,11 @@
 ## What it is
 An open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over database servers.
 
+## Installation
+```bash
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+```
+
 ---
 
 ## Key Flags

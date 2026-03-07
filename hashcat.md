@@ -3,6 +3,11 @@
 ## What it is
 The world's fastest password cracker. It supports highly optimized attacks on hundreds of different hashing algorithms.
 
+## Installation
+```bash
+sudo apt install hashcat
+```
+
 ---
 
 ## Key Flags

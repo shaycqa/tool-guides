@@ -5,6 +5,11 @@ A high-speed DNS resolver and subdomain bruteforcer. Uses `massdns` under the ho
 
 **Requires:** `massdns` installed and a resolvers list (e.g., from [trickest/resolvers](https://github.com/trickest/resolvers)).
 
+## Installation
+```bash
+go install -v github.com/d3mondev/puredns/v2/cmd/puredns@latest
+```
+
 ---
 
 ## Key Flags

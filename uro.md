@@ -3,6 +3,11 @@
 ## What it is
 A tool by s0md3v designed to declutter URL lists for crawling and pentesting by removing duplicate parameters, 'useless' extensions (like images/fonts), and incremental paths.
 
+## Installation
+```bash
+pip install uro
+```
+
 ---
 
 ## Key Flags

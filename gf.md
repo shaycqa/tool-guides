@@ -3,6 +3,11 @@
 ## What it is
 A wrapper around grep by tomnomnom, to help you quickly search for common vulnerability patterns (SQLi, XSS, SSRF, LFI) in large lists of URLs or files.
 
+## Installation
+```bash
+go install github.com/tomnomnom/gf@latest
+```
+
 ---
 
 ## Key Flags

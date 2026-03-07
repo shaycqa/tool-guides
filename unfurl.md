@@ -3,6 +3,11 @@
 ## What it is
 A Go-based CLI tool by tomnomnom used to extract specific parts of URLs provided via stdin. Extremely useful for isolating domains, paths, or query parameters.
 
+## Installation
+```bash
+go install github.com/tomnomnom/unfurl@latest
+```
+
 ---
 
 ## Key Flags

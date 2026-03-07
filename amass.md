@@ -3,6 +3,11 @@
 ## What it is
 A comprehensive in-depth DNS enumeration and network mapping tool by OWASP. It performs active and passive discovery to map an organization's external attack surface.
 
+## Installation
+```bash
+go install -v github.com/owasp-amass/amass/v4/...@master
+```
+
 ---
 
 ## Key Flags

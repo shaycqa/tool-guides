@@ -3,6 +3,11 @@
 ## What it is
 Get All URLs (gau) fetches known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl for any given domain.
 
+## Installation
+```bash
+go install github.com/lc/gau/v2/cmd/gau@latest
+```
+
 ---
 
 ## Key Flags

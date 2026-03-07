@@ -3,6 +3,13 @@
 ## What it is
 A Python script by m4ll0k based on LinkFinder, used to discover sensitive data like API keys, access tokens, and passwords inside JavaScript files.
 
+## Installation
+```bash
+git clone https://github.com/m4ll0k/SecretFinder.git
+cd SecretFinder
+pip install -r requirements.txt
+```
+
 ---
 
 ## Key Flags

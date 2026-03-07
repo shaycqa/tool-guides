@@ -3,6 +3,13 @@
 ## What it is
 A toolkit by ticarpi for testing, tweaking, and cracking JSON Web Tokens (JWTs). It automates common attacks like algorithm confusion, null signatures, and brute-forcing.
 
+## Installation
+```bash
+git clone https://github.com/ticarpi/jwt_tool
+cd jwt_tool
+python3 -m pip install termcolor cprint pycryptodomex requests
+```
+
 ---
 
 ## Key Flags

@@ -3,6 +3,11 @@
 ## What it is
 A fast, template-based vulnerability scanner by ProjectDiscovery. Uses YAML templates to detect CVEs, misconfigs, exposures, and more across thousands of hosts.
 
+## Installation
+```bash
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+```
+
 ---
 
 ## Key Flags
@@ -85,4 +90,32 @@ http://192.168.1.15:8080
 ```text
 [cve-2021-44228] [http] [critical] https://example.com/?q=${jndi:ldap://...}
 [tech-detect] [http] [info] http://192.168.1.15:8080 [Apache Tomcat]
+```
+
+## Important Nuclei Tags
+
+Nuclei uses tags to group templates. You can filter which templates to run by passing `-t` (directory) or `-tags` (comma separated tags).
+
+| Tag | Description |
+| :--- | :--- |
+| `cve` | Templates checking for publicly disclosed CVEs. |
+| `misconfig` | Checks for missing headers, weak configurations, and setup errors. |
+| `exposures` | Looks for exposed configs, `.env` files, backups, and git folders. |
+| `auth-bypass` | Vulnerabilities that allow bypassing authentication mechanisms. |
+| `sqli` | SQL Injection tests. |
+| `xss` | Cross-Site Scripting (XSS) tests. |
+| `ssrf` | Server-Side Request Forgery tests. |
+| `lfi` | Local File Inclusion and path traversal vulnerabilities. |
+| `rce` | Remote Code Execution tests (highly critical). |
+| `fuzz` | Advanced fuzzing templates for hunting unknown vulnerabilities. |
+| `tech` | Technology detection (e.g., identifying WordPress, React, Apache). |
+| `osint` | OSINT-related templates, credential checks against APIs, etc. |
+| `cloud` | Specific checks for AWS, Azure, GCP buckets and misconfigurations. |
+| `token-spray` | Validates exposed API keys and tokens by attempting to authenticate. |
+| `network` | Lower-level network and service checks (requires Nmap integration in some cases). |
+| `iot` | Checks targeting default credentials and vulns in routers, cameras, and IoT devices. |
+
+**Example:**
+```bash
+nuclei -u https://example.com -tags cve,rce,exposures
 ```

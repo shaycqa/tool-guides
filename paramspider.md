@@ -3,6 +3,13 @@
 ## What it is
 A tool by devanshbatham for mining parameters from web archives (Wayback Machine). Essential for discovering hidden parameters vulnerable to XSS, SQLi, or SSRF.
 
+## Installation
+```bash
+git clone https://github.com/devanshbatham/paramspider
+cd paramspider
+pip install .
+```
+
 ---
 
 ## Key Flags

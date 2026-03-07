@@ -3,6 +3,11 @@
 ## What it is
 A Go-based utility by lc used to quickly fetch JavaScript files from a list of URLs or subdomains. Great for starting client-side analysis.
 
+## Installation
+```bash
+go install github.com/lc/subjs@latest
+```
+
 ---
 
 ## Key Flags

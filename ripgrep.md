@@ -3,6 +3,11 @@
 ## What it is
 An extremely fast search tool that recursively searches files for regex or literal patterns. Like `grep` but much faster and smarter — respects `.gitignore`, supports Unicode, and highlights matches.
 
+## Installation
+```bash
+sudo apt install ripgrep
+```
+
 ---
 
 ## Key Flags

@@ -3,6 +3,11 @@
 ## What it is
 A tool by EgeBalci (originally based on tomnomnom's work) used to find reflected characters in URLs, which is a strong indicator of potential Cross-Site Scripting (XSS) vulnerabilities.
 
+## Installation
+```bash
+go install github.com/tomnomnom/hacks/kxss@latest
+```
+
 ---
 
 ## Key Flags

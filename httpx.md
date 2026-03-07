@@ -3,6 +3,11 @@
 ## What it is
 A fast HTTP probing tool by ProjectDiscovery. Takes a list of hosts and checks which ones are alive, while also extracting titles, status codes, technologies, and more.
 
+## Installation
+```bash
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+```
+
 ---
 
 ## Key Flags

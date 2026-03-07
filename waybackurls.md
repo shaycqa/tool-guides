@@ -3,6 +3,11 @@
 ## What it is
 A tool by tomnomnom that accepts line-delimited domains on stdin, fetches known URLs from the Wayback Machine for `*.domain`, and outputs them on stdout.
 
+## Installation
+```bash
+go install github.com/tomnomnom/waybackurls@latest
+```
+
 ---
 
 ## Key Flags

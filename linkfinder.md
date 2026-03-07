@@ -9,6 +9,13 @@ git clone https://github.com/GerbenJavado/LinkFinder.git
 cd LinkFinder && pip3 install -r requirements.txt
 ```
 
+## Installation
+```bash
+git clone https://github.com/GerbenJavado/LinkFinder.git
+cd LinkFinder
+pip install -r requirements.txt
+```
+
 ---
 
 ## Key Flags
