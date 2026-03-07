@@ -54,3 +54,8 @@ shodan download results_file "hostname:example.com"
 - **Initialization**: You must initialize the CLI with your API key first: `shodan init <API_KEY>`.
 - **Monitoring**: Set up network alerts for your infrastructure: `shodan alert create "My Network" 198.51.100.0/24`.
 - **Facets**: Get aggregate statistics using facets: `shodan search --facets port "org:Example"`.
+
+
+## Professional Tips & Tricks
+- **Favicon Hashing**: Find a company's favicon, get its MurmurHash, and search Shodan for `http.favicon.hash:<hash>` to discover hidden infrastructure not linked via DNS.
+- **Vulnerability Searching**: Use `vuln:cve-2023-xxxx` to find instances of a specific CVE (requires Enterprise API plan).

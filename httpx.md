@@ -95,3 +95,9 @@ example.com:8443
 http://192.168.1.15
 https://example.com:8443
 ```
+
+
+## Professional Tips & Tricks
+- **Store Responses**: Use `-store-response -store-chain` to keep a local copy of every HTTP response. You can grep through these later instead of re-requesting.
+- **Extract Regex**: Use `-er` to extract custom regexes. For example, extracting API keys or internal IP addresses directly from the responses while probing.
+- **HTTP/2**: By default, httpx uses HTTP/1.1. Force HTTP/2 with `-http2` as some WAFs or modern load balancers handle it differently and might expose misconfigurations.

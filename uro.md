@@ -64,3 +64,7 @@ https://test.com/login.php
 https://example.com/api/users?id=1
 https://test.com/login.php
 ```
+
+
+## Professional Tips & Tricks
+- **Integration**: Uro should be the standard middleman in all URL pipelines. E.g., `gau -> uro -> gf -> active testing`.

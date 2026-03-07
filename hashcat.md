@@ -70,3 +70,8 @@ hello123
 ```text
 5d41402abc4b2a76b9719d911017c592:hello
 ```
+
+
+## Professional Tips & Tricks
+- **Optimized Rules**: Don't just use `rockyou.txt`. Use the `OneRuleToRuleThemAll.rule` or `best64.rule` to mutate standard passwords into complex ones (e.g., `password` -> `Password123!`).
+- **Session Resuming**: Hashcat cracking can take days. Use `--session <name>` to pause and resume the cracking process.

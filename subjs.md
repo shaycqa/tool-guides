@@ -64,3 +64,7 @@ https://example.com/assets/app.js
 https://example.com/assets/vendor.js
 https://test.com/js/main.js
 ```
+
+
+## Professional Tips & Tricks
+- **Deep Inspection**: Use `subjs` to pull all JS files, then use `prettier` or a similar tool to unminify them before running `SecretFinder` or `LinkFinder` for significantly better results.

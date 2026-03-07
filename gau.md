@@ -70,3 +70,8 @@ https://example.com/about
 https://example.com/api/v1/users?id=1
 https://test.com/admin/login.php
 ```
+
+
+## Professional Tips & Tricks
+- **Provider Tuning**: If you are in a rush, limit the providers. OTX and URLScan are usually faster than Wayback Machine: `--providers otx,urlscan`.
+- **JSON Output**: Always use `--json` when building automated pipelines so you can extract HTTP status codes and MIME types directly with `jq`.

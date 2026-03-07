@@ -99,3 +99,10 @@ admin                   [Status: 403, Size: 250, Words: 10, Lines: 5]
 login                   [Status: 200, Size: 1540, Words: 120, Lines: 45]
 api                     [Status: 301, Size: 0, Words: 1, Lines: 1]
 ```
+
+
+## Professional Tips & Tricks
+- **Pitchfork vs Sniper**: FFuf operates like Burp's Sniper by default. If you use multiple wordlists (e.g., `-w users.txt:USER -w pass.txt:PASS`), it loops through sequentially. Use `-mode pitchfork` to iterate through them simultaneously.
+- **Clusterbomb**: Use `-mode clusterbomb` to test all possible combinations of multiple wordlists (warning: this grows exponentially).
+- **Recursion**: Use `-recursion -recursion-depth 2 -e .php,.bak,.txt` to automatically fuzz inside discovered directories.
+- **Replay proxy**: Use `-x http://127.0.0.1:8080` to send your ffuf traffic through Burp Suite. This is great for logging successful hits into Burp's history.

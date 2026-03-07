@@ -96,3 +96,7 @@ api.example.com
 dev.example.com
 admin.test.com
 ```
+
+
+## Professional Tips & Tricks
+- **Massive Wordlists**: PureDNS is fast enough to handle wordlists with billions of lines. Always resolve against a massive wordlist (like Assetnote's `best-dns-wordlist.txt`) and provide a clean list of public resolvers.

@@ -66,3 +66,7 @@ id
 role
 redirect
 ```
+
+
+## Professional Tips & Tricks
+- **Dynamic Wordlists**: Create a custom wordlist based on the target's actual naming conventions by extracting all paths and parameters: `cat urls.txt | unfurl paths | sort -u > custom_wordlist.txt`.

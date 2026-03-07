@@ -112,3 +112,9 @@ https://test.com/profile?name=john
 ```text
 [V] [Reflected] https://example.com/search?q=%22%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E
 ```
+
+
+## Professional Tips & Tricks
+- **WAF Evasion**: Dalfox has built-in evasion (`--evasion`). You can also provide custom payloads if you identify the WAF type.
+- **Deep DOM XSS**: Dalfox analyzes the DOM structure. If you find a vulnerable parameter, Dalfox can often build a working PoC automatically.
+- **Piping from GF**: The ultimate pipeline: `waymore -i target.com -mode U | uro | gf xss | dalfox pipe`

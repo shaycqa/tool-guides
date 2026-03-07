@@ -75,3 +75,7 @@ done < jsfiles.txt
 - **Execution Pipeline**: Best used in an automated loop: download JS files with `subjs` -> feed to `LinkFinder` -> parse paths to `httpx`.
 - **Input Flexibility**: Can parse local directories, single files, or remote URLs directly.
 - **Burp Integration**: LinkFinder has a Burp Suite extension version which is highly recommended for manual testing.
+
+
+## Professional Tips & Tricks
+- **Automated Extraction**: Run LinkFinder against a target's main JS bundle, extract the endpoints, append them to the base URL, and feed them into `httpx` to see which internal API endpoints are accessible.

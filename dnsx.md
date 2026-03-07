@@ -71,3 +71,8 @@ dev.example.com
 api.example.com [192.168.1.15]
 dev.example.com [10.0.0.5]
 ```
+
+
+## Professional Tips & Tricks
+- **Piping from other tools**: `subfinder -silent -d target.com | dnsx -silent -a -resp-only` is the fastest way to get a clean list of live IP addresses.
+- **Wildcard Filtering**: Many domains have wildcard DNS. dnsx handles this gracefully, but if you want to explicitly check for it, you can use the `-wd` flag to output only valid records.

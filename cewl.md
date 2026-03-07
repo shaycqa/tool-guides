@@ -76,3 +76,7 @@ cewl -d 2 -m 5 --with-numbers -w custom_wordlist.txt https://example.com
 - **Depth Settings**: Use `-d` to control how deep CeWL spiders the site (default is 2).
 - **Minimum Word Length**: Use `-m` to set a minimum word length to filter out useless small words (e.g., `-m 5`).
 - **Authentication**: CeWL supports basic auth (`--auth_type`, `--auth_user`, `--auth_pass`) if the target is protected.
+
+
+## Professional Tips & Tricks
+- **Custom Brute-Forcing Wordlist**: CeWL spiders a site and extracts unique words. Use this to create a highly targeted wordlist for password brute-forcing (SSH, FTP, Login panels) tailored specifically to the company's jargon.

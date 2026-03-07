@@ -82,3 +82,8 @@ curl -u admin:password https://example.com/admin
 - **Path Traversal**: Use `--path-as-is` so curl doesn't squash `../` sequences before sending the request.
 - **Timing & Performance**: Use `-w` (write-out) to measure response times: `curl -w "%{time_total}\n" -o /dev/null -s http://example.com`.
 - **Proxying**: Easily send traffic through Burp Suite for inspection: `-x http://127.0.0.1:8080`.
+
+
+## Professional Tips & Tricks
+- **Bypass WAFs via HTTP Version**: Some legacy WAFs break when you use `--http2` or `--http3`. Alternatively, dropping down to `--http0.9` can bypass modern proxy inspections.
+- **Resolve Overrides**: Test virtual hosts directly without changing your `/etc/hosts` file using `--resolve dev.target.com:443:192.168.1.100`.

@@ -52,3 +52,8 @@ https://test.com/profile?name=john
 ```text
 URL: https://example.com/search?q=test Param: q Unfiltered: [" ' < >]
 ```
+
+
+## Professional Tips & Tricks
+- **Filtering the Noise**: kxss outputs unfiltered characters. Look for URLs where `<` and `>` and `"` are all unfiltered. These are your prime candidates for stored or reflected XSS.
+- **Automation**: If kxss shows `<` and `>` are allowed, immediately pipe that specific URL to Dalfox or manually test an SVG/IMG payload.

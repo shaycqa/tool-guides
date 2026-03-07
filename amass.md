@@ -55,3 +55,9 @@ amass enum -d example.com -o amass_results.txt
 - **API Keys**: Amass's true power comes from APIs. Configure them in `~/.config/amass/config.ini` and run with `-config ~/.config/amass/config.ini`.
 - **Continuous Monitoring**: Use `amass track -d example.com` to see what changed since the last enumeration.
 - **Visualization**: Use `amass viz -d3` to generate network graphs.
+
+
+## Professional Tips & Tricks
+- **Database Management**: Amass uses a graph database. If you scan the same target over time, use `amass track` to see the differences (newly discovered subdomains).
+- **Scripting Engine**: Learn to use the Amass scripting engine (ADS) to write your own custom data source integrations.
+- **Subdomain Takeover**: Use `amass enum -d target.com -active -dir ./amass_output` and then look for the `takeovers` in the output.

@@ -59,3 +59,8 @@ https://example.com/search?q=test
 https://example.com/page.php?id=XSS
 https://example.com/search?q=XSS
 ```
+
+
+## Professional Tips & Tricks
+- **Blind SSRF Testing**: `cat urls_with_params.txt | qsreplace 'http://<your-interactsh-id>' | httpx`. Check your interactsh client for pings.
+- **SQLi Error Based**: `cat urls.txt | qsreplace "'" | httpx -mr 'SQL syntax'`.

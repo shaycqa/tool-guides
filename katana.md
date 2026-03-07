@@ -94,3 +94,9 @@ https://example.com/contact
 https://example.com/api/v1/status
 https://test.com/login
 ```
+
+
+## Professional Tips & Tricks
+- **Form Filling**: Use `-fuzz` and configure automatic form filling to crawl behind simple search inputs or contact forms.
+- **Header Manipulation**: If the target blocks standard crawlers, rotate User-Agents dynamically or provide authorization cookies via `-H 'Cookie: session=...'`.
+- **Scraping JS Files**: Combine with `-jc` (js-crawl) to aggressively parse JavaScript files for endpoints, making it a replacement for LinkFinder in many scenarios.

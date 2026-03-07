@@ -97,3 +97,8 @@ https://test.com/profile
   }
 }
 ```
+
+
+## Professional Tips & Tricks
+- **JSON Body Fuzzing**: Arjun isn't just for query parameters. Use `-m POST -c '{"username":"admin"}'` to fuzz for hidden JSON parameters in API endpoints.
+- **Chunking**: By default Arjun sends 500 parameters per request. If a WAF blocks large requests, lower the chunk size using `-c 100`.

@@ -65,3 +65,7 @@ test.com
 https://example.com/page.php?id=FUZZ
 https://test.com/search?q=FUZZ
 ```
+
+
+## Professional Tips & Tricks
+- **Hidden Parameters**: Often, developers leave old API versions active. ParamSpider finds parameters from months or years ago that are still supported by the backend but removed from the frontend UI.

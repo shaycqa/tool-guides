@@ -61,3 +61,7 @@ http://example.com/robots.txt
 https://example.com/api/v1/users?id=1
 https://test.com/login.php
 ```
+
+
+## Professional Tips & Tricks
+- **JSON Output for Extraction**: Use `-json` to get detailed output including the HTTP status code the Wayback Machine observed. You can `jq` this to find endpoints that returned 200 OK.

@@ -63,3 +63,8 @@ https://test.com
 ```text
 Directory with screenshot images (e.g., `https-example.com.png`, `https-test.com.png`)
 ```
+
+
+## Professional Tips & Tricks
+- **Sorting by Similarity**: Gowitness can group similar screenshots together. This is invaluable when scanning 10,000 subdomains to quickly filter out the 9,500 that are just standard Cloudflare 403 pages.
+- **Nmap Integration**: You can feed an Nmap XML output directly into gowitness using `gowitness nmap -f scan.xml` to screenshot all open web ports.

@@ -65,3 +65,7 @@ https://example.com/redirect?url=http://test.com
 ```text
 https://example.com/page.php?id=1
 ```
+
+
+## Professional Tips & Tricks
+- **Writing Custom Patterns**: You can write your own `.json` files in `~/.gf/`. For example, create a pattern that specifically greps for your target's internal domain names (e.g., `target.corp` or `target.local`).

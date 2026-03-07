@@ -50,3 +50,9 @@ python3 jwt_tool.py <jwt_token> -t https://api.example.com/user -rh 'Authorizati
 - **Advanced Attacks**: Use `-X k` for Key Confusion (RS256 to HS256) and `-X I` for JWK/JKU Header Injection.
 - **Tampering**: You can base64 encode/decode and manually sign tokens within the interactive mode (`-I`).
 - **Public Keys**: If you find the server's public key, you can provide it to `jwt_tool` to forge HS256 tokens in a Key Confusion attack.
+
+
+## Professional Tips & Tricks
+- **None Algorithm**: The easiest check. Use `-X a` to test the `alg: none` vulnerability.
+- **Public Key to Secret**: If you have the public key (`.pem` or `.crt`), you can use `-X k` to attempt the Key Confusion attack where the server expects asymmetric but you provide symmetric.
+- **Automated Pipeline**: Provide a list of tokens and run them all through the `-M at` (All Tests) playbook.

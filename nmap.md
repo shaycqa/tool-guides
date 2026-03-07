@@ -83,3 +83,8 @@ nmap -iL targets.txt -Pn -sV
 - **Nmap Scripting Engine (NSE)**: The real power of Nmap. Use `--script vuln` to check for common CVEs, or `--script http-enum` to enumerate directories.
 - **Timing Templates**: Use `-T4` for faster scanning on reliable networks, but drop to `-T2` if you are getting dropped packets or encountering firewalls.
 - **Output All Formats**: Always use `-oA <filename>` to save results in Grepable, XML, and Normal formats simultaneously.
+
+
+## Professional Tips & Tricks
+- **Min Rate**: To speed up Nmap significantly, use `--min-rate 1000`. Be careful, as this might crash fragile IoT devices.
+- **Grepable Output**: Always use `-oA`. The `.gnmap` format allows you to easily `grep` for specific open ports across hundreds of hosts (e.g., `awk '/80\/open/ {print $2}' scan.gnmap`).

@@ -89,3 +89,8 @@ api.example.com
 dev.example.com
 admin.test.com
 ```
+
+
+## Professional Tips & Tricks
+- **Recursive Bruteforcing**: Combine subfinder with a custom wordlist and dnsx: `subfinder -d target.com -silent | dnsx -silent | awk '{print $1}' > subs.txt`. Then take the resolved subdomains, append wordlist items to them, and resolve again.
+- **API Keys are Everything**: A subfinder without API keys misses up to 40% of the attack surface. Prioritize getting keys for Shodan, Censys, SecurityTrails, Chaos, and GitHub.

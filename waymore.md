@@ -66,3 +66,8 @@ https://example.com/assets/main.js
 https://example.com/api/v1/users?id=1
 https://test.com/admin/login.php
 ```
+
+
+## Professional Tips & Tricks
+- **Parameter Discovery**: Run waymore on a target, then use `uro` to filter, and `gf` to extract parameters. This is often faster and yields more results than traditional spidering.
+- **Archived Responses**: The `-mode R` is incredibly powerful. It downloads the actual HTML from the Wayback Machine. You can `grep` through these historical files for leaked API keys that were removed in later versions of the site.

@@ -58,3 +58,9 @@ sqlmap -u "http://example.com/page.php?id=1" --level=5 --risk=3 --batch
 - **OS Shell**: If the DB user has high privileges, you can get a shell on the server using `--os-shell`.
 - **Stealth**: Use `--random-agent` and `--delay` to avoid tripping basic security monitoring.
 - **Tor/Proxies**: Route traffic through Tor using `--tor --tor-type=SOCKS5`.
+
+
+## Professional Tips & Tricks
+- **Risk and Level**: Standard scans are safe (`--level 1 --risk 1`). For hard-to-find injections, increase to `--level 5 --risk 3`, but be aware risk 3 can modify the database (e.g., OR UPDATE clauses).
+- **Bypassing WAFs**: The `--tamper` flag is crucial. Common bypasses: `--tamper=space2comment,randomcase,charencode`. Chain them together for better results.
+- **Eval**: Use `--eval` to execute Python code before the request is sent. Extremely useful if the target requires a dynamic hash or timestamp in the parameter.

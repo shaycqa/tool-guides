@@ -64,3 +64,7 @@ https://test.com/js/main.js
  -> Google API Key: AIzaSyA...
  -> AWS Access Key: AKIAIOSFODNN7EXAMPLE
 ```
+
+
+## Professional Tips & Tricks
+- **Combine with Waymore**: Download gigabytes of historical JavaScript files using `waymore -mode R`, then run `SecretFinder` across the local directory to find keys that were leaked years ago and potentially never revoked.

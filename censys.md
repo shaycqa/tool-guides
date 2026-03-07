@@ -47,3 +47,8 @@ censys search "example.com" --output json > results.json
 - **Configuration**: Run `censys config` to set up your API ID and Secret.
 - **ASM (Attack Surface Management)**: The CLI also supports interacting with Censys ASM via the `censys asm` subcommand.
 - **Dorking**: You can use complex boolean logic and regular expressions in your search queries.
+
+
+## Professional Tips & Tricks
+- **Certificate Parsing**: Use Censys to search for historical SSL certificates. Often, an internal DEV server will have a certificate explicitly naming it (e.g., `dev.internal.target.com`), exposing the subdomain.
+- **Host Pivoting**: Find one IP belonging to the target, analyze its specific open ports and software versions, and query Censys for identical setups.

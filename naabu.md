@@ -92,3 +92,8 @@ example.com
 192.168.1.15:443
 example.com:8443
 ```
+
+
+## Professional Tips & Tricks
+- **Speed vs Accuracy**: Naabu is built for speed (SYN scans). If you are dropping packets, use `-c 50 -rate 100` to slow it down. For TCP connect scans (more accurate but slower), use `-s c`.
+- **Nmap Handoff**: The best workflow is using Naabu to quickly find open ports, and then passing *only* those ports to Nmap for deep service and script scanning: `naabu -host 192.168.1.1 -nmap-cli 'nmap -sV -sC'`.
