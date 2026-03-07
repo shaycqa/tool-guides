@@ -119,3 +119,63 @@ Nuclei uses tags to group templates. You can filter which templates to run by pa
 ```bash
 nuclei -u https://example.com -tags cve,rce,exposures
 ```
+
+## Creating Custom Templates
+
+Nuclei's true power lies in its YAML-based templating engine. Creating your own templates allows you to hunt for specific internal vulnerabilities, custom bypasses, or newly released zero-days before official templates are published.
+
+### 1. Basic Template Structure
+Every Nuclei template follows a standard structure consisting of an `id`, an `info` block, and the protocol-specific request (e.g., `http`, `dns`, `network`).
+
+```yaml
+id: my-custom-detection
+
+info:
+  name: Custom Vulnerability Detection
+  author: your-name
+  severity: high
+  description: Brief description of what this template detects.
+  tags: custom, auth-bypass
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/admin/config.json"
+
+    matchers:
+      - type: word
+        words:
+          - "db_password"
+          - "api_key"
+        condition: or
+        part: body
+
+      - type: status
+        status:
+          - 200
+```
+
+### 2. Key Components Explained
+*   **`id`**: A unique, lowercase string (no spaces) used to identify the template.
+*   **`info`**: Metadata about the template (`severity` and `tags` are highly recommended).
+*   **`path`**: Supports dynamic variables like `{{BaseURL}}` (the target URL provided via `-u`) or `{{Hostname}}`.
+*   **`matchers`**: Logic to determine if the vulnerability exists.
+    *   `type: word`: Looks for specific strings.
+    *   `type: status`: Checks the HTTP response code.
+    *   `type: regex`: Uses regular expressions for complex matching.
+    *   `part`: Specifies where to look (`body`, `header`).
+    *   `condition`: When using multiple words, specifies if `and` / `or` logic should be applied.
+
+### 3. Testing Your Template
+Before running your template at scale, validate its syntax and test it against a target:
+
+**Validate Syntax:**
+```bash
+nuclei -validate -t my-custom-template.yaml
+```
+
+**Test Against a Target (with debug mode):**
+```bash
+nuclei -t my-custom-template.yaml -u https://example.com -debug
+```
+*The `-debug` flag is crucial when developing templates as it shows the exact raw HTTP request sent and the raw response received.*
